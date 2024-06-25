@@ -18,6 +18,7 @@ jobs:
               with:
                   node-version: '14'
                   cache: 'npm'
+                  cache-dependency-path: ./src/package-lock.json
 
             - name: Install dependencies build and dist
               run: |
