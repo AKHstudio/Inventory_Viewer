@@ -1,0 +1,75 @@
+name: Create Release
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup node
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '14'
+                  cache: 'npm'
+
+            - name: Install dependencies build and dist
+              run: |
+                  npm i --omit=dev
+                  npm run release
+              working-directory: ./src
+
+            - name: Upload release dist file
+              uses: actions/upload-artifact@v4
+              with:
+                  path: ./src/dist
+                  name: dist
+
+    release:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Get Version
+              id: get_version
+              run: echo "VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+              working-directory: ./src
+
+            - name: Create Release
+              id: create_release
+              uses: actions/create-release@v1
+              with:
+                  tag_name: ${{ env.VERSION }}
+                  release_name: Release ver${{ env.VERSION }}
+                  body_path: ./RELEASE.md
+                  draft: false
+                  prerelease: false
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Set Upload Url
+              id: set_upload_url
+              run: echo "UPLOAD_URL=${{ steps.create_release.outputs.upload_url }}" >> "$GITHUB_ENV"
+
+            - name: Download dist artifact
+              uses: actions/download-artifact@v4
+              with:
+                  name: dist
+
+            - name: Create Release Asset
+              id: create_release_asset
+              uses: actions/upload-release-asset@v1
+              with:
+                  upload_url: ${{ env.UPLOAD_URL }}
+                  asset_path: ./src/dist
+                  asset_name: ${{ env.VERSION }}.mcaddon
+                  asset_content_type: application/zip
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
