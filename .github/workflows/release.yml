@@ -65,7 +65,10 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: dist
-                  path: ./src/dist
+                  path: ./src
+
+            - name: Check dist artifact
+              run: ls -la ./src
 
             - name: Create Release Asset
               id: create_release_asset
