@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { globSync } from 'glob';
 import Archiver from 'archiver';
+import * as pk from './package.json';
 
 // distフォルダを作成
 if (!fs.existsSync('dist')) {
@@ -58,7 +59,7 @@ RP.forEach((path) => {
 
 fs.rmSync('build', { recursive: true });
 
-const output = fs.createWriteStream('dist/ViewInventory.mcaddon');
+const output = fs.createWriteStream(`dist/ViewInventory_${pk.version.replace(/\./g, '-')}.mcaddon`);
 
 const archiver = Archiver('zip', { zlib: { level: 9 } });
 
