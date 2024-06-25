@@ -22,9 +22,10 @@ jobs:
 
             - name: Install dependencies build and dist
               run: |
-                  cd ./src
+                  echo ls
                   npm i --omit=dev
                   npm run release
+              working-directory: ./src
 
             - name: Upload release dist file
               uses: actions/upload-artifact@v4
