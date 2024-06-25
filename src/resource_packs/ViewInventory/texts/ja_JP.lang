@@ -1,0 +1,10 @@
+## inventoryコマンド
+
+command.inventory.permission.no=あなたにはインベントリーを見る権限がありません
+command.inventory.help=!inventory <プレイヤー>
+command.inventory.player.not_found=名前が%1のプレイヤーがいません
+command.inventory.close.chat=チャットを閉じて下さい
+
+## UI
+
+ui.inventory.title=Inventory of %1

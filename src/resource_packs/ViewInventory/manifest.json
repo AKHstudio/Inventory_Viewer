@@ -1,0 +1,27 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "インベントリビューアー 1.0.0 by tako1dayo",
+        "name": "view-inventory",
+        "uuid": "fc646364-9f45-4293-8328-d83b32bb98f2",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "description": "view-inventory resource pack",
+            "type": "resources",
+            "uuid": "fc1d29f4-77e8-488c-8b76-30b043da8ee6",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "b40aaf03-b2c0-47af-8321-bab44c00b641",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+        "authors": ["AKIsan0725", "tako1dayo"]
+    }
+}

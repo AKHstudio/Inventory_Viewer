@@ -1,0 +1,12 @@
+build/
+node_modules/
+dist/
+bedrock-samples-*/
+.vscode/
+
+/addonfilesystem.config.json 
+package-lock.json
+/package.json
+
+/debug.js
+/gulpfile.js

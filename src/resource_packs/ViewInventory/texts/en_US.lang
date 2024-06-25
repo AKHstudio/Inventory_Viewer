@@ -1,0 +1,4 @@
+## chatEvent
+
+events.chatsend.before.alway.no.permission = You do not have permission to view the inventory.
+events.chatsend.before.alway.ok = Please close the chat

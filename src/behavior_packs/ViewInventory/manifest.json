@@ -1,0 +1,43 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "インベントリビューアー 1.0.0 by tako1dayo",
+        "name": "view-inventory",
+        "uuid": "b40aaf03-b2c0-47af-8321-bab44c00b641",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 0]
+    },
+    "modules": [
+        {
+            "description": "view-inventory behavior pack",
+            "type": "data",
+            "uuid": "888ae95d-dbf2-4762-a7b2-8a929f979f69",
+            "version": [1, 0, 0]
+        },
+        {
+            "description": "script",
+            "language": "javascript",
+            "type": "script",
+            "uuid": "d046b4f7-5fdb-457c-9159-cff146322ff4",
+            "version": [1, 0, 0],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "metadata": {
+        "authors": ["tako1dayo", "AKIsan0725"]
+    },
+    "dependencies": [
+        {
+            "uuid": "fc646364-9f45-4293-8328-d83b32bb98f2",
+            "version": [1, 0, 0]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.12.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.2.0-beta"
+        }
+    ]
+}
