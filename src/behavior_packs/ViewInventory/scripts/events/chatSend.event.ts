@@ -17,6 +17,7 @@ class Before {
                 // 権限がない場合はメッセージを送信し、イベントをキャンセル
                 sender.sendMessage({ translate: 'command.inventory.permission.no' });
                 ev.cancel = true;
+                return;
             }
 
             //メッセージのindexの1をチェク
