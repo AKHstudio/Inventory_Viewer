@@ -29,8 +29,8 @@ jobs:
 
             - name: Install dependencies build and dist
               run: |
-                  ls -la
                   npm i
+                  ls -la
                   npm run release
               working-directory: ./src
 
