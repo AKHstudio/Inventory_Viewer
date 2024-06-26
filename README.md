@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/AKHstudio/Inventory_Viewer/blob/main/LICENSE)
+
 # What is this?
 
 プレイヤーのインベントリーを閲覧するための minecraft BE アドオンです。
@@ -8,11 +10,11 @@
 
 現在見る以外の動作はできません。
 
-## important
+> [!IMPORTANT]
+> 権限対策で、`!inventory` の使用には tag `allow_view_inventory` が必要です。
+>
+> 使用には ワールド設定 > ゲーム > 実験 の ベータ api の項目をオンにしてください
 
-権限対策で、`!inventory` の使用には tag `allow_view_inventory` が必要です。
-
-使用には ワールド設定 > ゲーム > 実験 の ベータ api の項目をオンにしてください
 
 ### Command
 
