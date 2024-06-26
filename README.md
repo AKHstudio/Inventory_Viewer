@@ -12,6 +12,8 @@
 
 権限対策で、`!inventory` の使用には tag `allow_view_inventory` が必要です。
 
+使用には ワールド設定 > ゲーム > 実験 の ベータ api の項目をオンにしてください
+
 ### Command
 
 `/tag @s add allow_view_inventory`
