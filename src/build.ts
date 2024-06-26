@@ -2,6 +2,7 @@ import { execSync } from 'child_process';
 import * as fs from 'fs';
 import { globSync } from 'glob';
 import { MinifyOptions, minify } from 'uglify-js';
+import * as pk from './package.json';
 
 // buildフォルダを作成
 if (!fs.existsSync('build')) {
@@ -71,4 +72,35 @@ scripts.forEach((file) => {
 
     fs.writeFileSync(file, minifiedContent);
     console.log('minify: ' + file);
+});
+
+const manifests_BP = globSync('./build/behavior_packs/*/manifest.json', { nodir: true }).map((file) => file.replace(/\\/g, '/'));
+
+const manifests_RP = globSync('./build/resource_packs/*/manifest.json', { nodir: true }).map((file) => file.replace(/\\/g, '/'));
+
+const version = pk.version;
+
+manifests_BP.forEach((file) => {
+    const manifest = JSON.parse(fs.readFileSync(file, 'utf8'));
+    manifest.header.description = manifest.header.description.replace(/(\d+\.\d+\.\d+)/, version);
+    manifest.header.version = version.split('.').map(Number);
+
+    manifest.modules.forEach((module: any) => {
+        module.version = version.split('.').map(Number);
+    });
+    manifest.dependencies[0].version = version.split('.').map(Number);
+
+    fs.writeFileSync(file, JSON.stringify(manifest, null, 4));
+});
+
+manifests_RP.forEach((file) => {
+    const manifest = JSON.parse(fs.readFileSync(file, 'utf8'));
+    manifest.header.description = manifest.header.description.replace(/(\d+\.\d+\.\d+)/, version);
+    manifest.header.version = version.split('.').map(Number);
+    manifest.modules.forEach((module: any) => {
+        module.version = version.split('.').map(Number);
+    });
+    manifest.dependencies[0].version = version.split('.').map(Number);
+
+    fs.writeFileSync(file, JSON.stringify(manifest, null, 4));
 });
