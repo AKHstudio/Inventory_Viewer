@@ -4,6 +4,15 @@ on:
     push:
         branches:
             - main
+        paths:
+            - 'src/package.json'
+    pull_request:
+        types:
+            - closed
+        branches:
+            - main
+        paths:
+            - 'src/package.json'
     workflow_dispatch:
 
 jobs:
@@ -17,8 +26,6 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: '20'
-                  cache: 'npm'
-                  cache-dependency-path: ./src/package-lock.json
 
             - name: Install dependencies build and dist
               run: |
