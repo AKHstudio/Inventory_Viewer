@@ -22,7 +22,7 @@
 
 # License
 
-このライブラリは [Herobrine643928](https://github.com/Herobrine643928) & [LeGend077](https://github.com/LeGend077) によって作成され維持され、CC BY 4.0 のライセンスのもとで提供されています。
+このライブラリは [Herobrine643928](https://github.com/Herobrine643928) & [LeGend077](https://github.com/LeGend077) によって作成され維持されており、CC BY 4.0 のライセンスのもとで提供されています。
 ライセンスの詳細については、こちらをご覧ください：https://creativecommons.org/licenses/by/4.0/deed.ja
 
 一部改変し利用しています。
