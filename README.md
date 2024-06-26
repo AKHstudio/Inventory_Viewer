@@ -12,14 +12,18 @@
 
 権限対策で、`!inventory` の使用には tag `allow_view_inventory` が必要です。
 
+### Command
+
+`/tag @s add allow_view_inventory`
+
 # Use Library
 
 -   [Chest-UI](https://github.com/Herobrine643928/Chest-UI)
 
 # License
 
-このライブラリは [Herobrine643928](https://github.com/Herobrine643928) & [LeGend077](https://github.com/LeGend077) によって作成され維持されています、CC BY 4.0 のライセンスのもとで提供されています。
-ライセンスの詳細については、こちらをご覧ください：https://creativecommons.org/licenses/by/4.0/
+このライブラリは [Herobrine643928](https://github.com/Herobrine643928) & [LeGend077](https://github.com/LeGend077) によって作成され維持され、CC BY 4.0 のライセンスのもとで提供されています。
+ライセンスの詳細については、こちらをご覧ください：https://creativecommons.org/licenses/by/4.0/deed.ja
 
 一部改変し利用しています。
 
