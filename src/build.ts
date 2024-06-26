@@ -12,7 +12,12 @@ if (!fs.existsSync('build')) {
     fs.mkdirSync('build');
 }
 
-execSync('tsc --diagnostics'); // TypeScriptをコンパイル
+try {
+    const buffer = execSync('tsc --diagnostics');
+    console.log(buffer.toString());
+} catch (error: any) {
+    console.error(error);
+}
 
 // srcフォルダ内のファイルを./behavior_packs/**/scripts 以外をbuildフォルダにコピー
 const files = globSync(['./behavior_packs/**/*', './resource_packs/**/*'], { ignore: ['./behavior_packs/**/scripts/**/*', './behavior_packs/**/scripts/'] }).map((file) => file.replace(/\\/g, '/'));
