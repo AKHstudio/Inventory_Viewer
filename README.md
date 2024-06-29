@@ -9,11 +9,11 @@
 
 # What is this?
 
-プレイヤーのインベントリーを閲覧するための minecraft BE アドオンです。
+プレイヤーのインベントリを閲覧するための minecraft BE アドオンです。
 
 # Use
 
-`!inventory <Player name>` でインベントリーを開くことができます。
+`!inventory <Player name>` でインベントリを開くことができます。
 
 現在見る以外の動作はできません。
 
@@ -46,7 +46,7 @@
 
 # Feature Ideas
 
--   インベントリーの中身を操作する機能
+-   インベントリの中身を操作する機能
 
 # Author
 
