@@ -1,5 +1,5 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/AKHstudio/Inventory_Viewer/blob/main/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/AKHstudio/Inventory_Viewer.svg)](https://github.com/AKHstudio/Inventory_Viewer/releases/tag/1.0.1)
+[![GitHub release](https://img.shields.io/github/release/AKHstudio/Inventory_Viewer.svg)](https://github.com/AKHstudio/Inventory_Viewer/releases/latest)
 [![Minecraft](https://img.shields.io/badge/Minecraft-BE-yellow)](https://www.minecraft.net/ja-jp/about-minecraft)
 [![Create Release](https://github.com/AKHstudio/Inventory_Viewer/actions/workflows/release.yml/badge.svg)](https://github.com/AKHstudio/Inventory_Viewer/actions/workflows/release.yml)
 
