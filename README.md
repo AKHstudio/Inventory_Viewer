@@ -1,3 +1,6 @@
+> [!CAUTION]  
+>　現在は開発を一時的に中断しています！！
+
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/AKHstudio/Inventory_Viewer/blob/main/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/AKHstudio/Inventory_Viewer.svg)](https://github.com/AKHstudio/Inventory_Viewer/releases/latest)
 [![Minecraft](https://img.shields.io/badge/Minecraft-BE-yellow)](https://www.minecraft.net/ja-jp/about-minecraft)
